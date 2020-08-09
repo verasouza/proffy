@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/forms.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
-    <script src="/scripts/addField.js" defer></script>
+    <!-- <script src="/scripts/addField.js" defer></script> -->
+    <script src="/scripts/addRemoveFields.js" defer></script>
 </head>
 <body id="page-give-classes">
     <div id="container">
@@ -27,7 +28,7 @@
         </div>
        </header>
        <main>
-           <form action="" id="create-class">
+           <form action="/save-classes" id="create-class" method="POST">
                <fieldset>
                    <legend>Seus dados</legend>
                    <div class="input-block">
@@ -86,6 +87,9 @@
                         <label for="time_to">Até</label>
                         <input type="time" name="time_to[]" required>
                     </div>
+                    <div class="container-excluir">
+                        <span id="deleteItem"><img src="/images/icons/excluir.svg" alt=""></span>
+                    </div>
                    </div>
                    
                 
@@ -102,6 +106,6 @@
        </main>
     </div>
 
-   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </body>
 </html>

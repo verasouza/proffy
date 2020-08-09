@@ -129,6 +129,12 @@ height: 100vh;
     background-color: var(--color-secondary-dark);
 }
 
+#page-study main .no-results{
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
+
 
 @media(min-width:700px){
     #page-study #container{
@@ -166,7 +172,7 @@ height: 100vh;
 
     #search-teachers{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 16px;
         position: absolute;
         bottom: -28px;

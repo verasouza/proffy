@@ -44,14 +44,22 @@
                     </select>
                 </div>
                 <div class="input-block">
-                    <label for="time">Hora</label>
-                    <input type="time" name="time" id="time" value="{{filters.time}}">
+                    <label for="time_from">Hora ínicio</label>
+                    <input type="time" name="time_from" id="time_from" value="{{filters.time_from}}">
+                </div>
+                <div class="input-block">
+                    <label for="time_to">Hora fim</label>
+                    <input type="time" name="time_to" id="time_to" value="{{filters.time_to}}">
                 </div>
                 <button type="submit">Filtrar</button>
             </form>
         </div>
        </header>
        <main>
+           {% if proffys == "" %}
+           <p class="no-results">Nenhum professor encontrado com a sua pesquisa.</p>
+
+           {%else%}
            {%for proffy in proffys %}         
         <article class="teacher-item">
             <header>
@@ -76,6 +84,8 @@
             </footer>
         </article>
         {%endfor%}
+
+        {%endif%}
 
        </main>
     </div>
